@@ -11,6 +11,8 @@ func main() {
 	router.POST("/owner", owners.CreateOwner)
 	router.GET("/owner/:ownerId", owners.ReadOneOwner)
 	router.GET("/appartment/:appartmentNumber/owner", owners.ReadAppartmentOwner)
+	router.PUT("/owner/:ownerId", owners.UpdateOwnerById)
+	router.DELETE("/owner/:ownerId", owners.DeleteOwnerById)
 
 	router.Run()
 }
